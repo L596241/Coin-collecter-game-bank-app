@@ -1,47 +1,50 @@
-## Stacc-Challenge
-This is a fun project made as part of a competition - Stacc Challenge.
+## Stacc-Challenge: Et Web-Basert Spare-Spill
+Dette prosjektet er en del av Stacc Challenge og har som mål å oppmuntre bankkunder til å spare penger på en morsom måte. Ved hjelp av Python og Phaser for JavaScript, presenterer prosjektet et enkelt, men avhengighetsskapende spill som omgjør poengsummen din til ekte sparing!
 
-The idea of this project is to motivate bank customers to save more money!
+## Konsept
+Spillere deltar i et spill for å samle virtuelle mynter, potter og regnbuer. I stedet for å bruke penger på et lotteri, tjener de en poengsum. Denne poengsummen blir så beløpet som overføres fra deres brukskonto til en sparekonto. Det er en vinn-vinn situasjon: kundene har det gøy og sparer penger samtidig.
 
-Nothing beats a simple, but addictive game. 
-Instead of spending money on a lottery, the customer will get the impression of winning, 
-but rather, the score will actually be the amount of money that
-will be withdrawn from the account and put into a savings account! Pretty clever, huh?
-This way the customer will most likely save more money than usual.
+## Teknologier Brukt
+- Python
+- JavaScript med Phaser
+- HTML, CSS
+- Flask for back-end
+- SQLite3 for databasen
 
-## How to run
-Make sure you have python 3 installed.
-In command prompt or a terminal, run the following commands:
+## Hvordan Kjøre Applikasjonen
 
-pip install pgzero                                                        
-pip install pygames
+1. Sørg for at du har installert Python 3.10. +
+2. Klon repositoriet til din lokale maskin.
+3. Installer nødvendige pakker:
+   ```bash
+   pip install Flask
+   ```
+4. Naviger til prosjektets mappe og kjør:
+   ```bash
+   python app.py
+   ```
+5. Åpne nettleseren din og gå til `http://localhost:5000/`.
+6. Deretter må du opprette en bruker for å logge inn.
+Hver ny bruker vil få opprettet to bankkontoer i sql: Hovedkonto og Sparekonto.
+10 000 NOK (kr) legges automatisk til for hver ny registrert bruker. Kult, ikke sant?
+Når du spiller spillet, vil du ha muligheten til å overføre beløpet som tilsvarer poengsummen i spillet, til sparekontoen din. Pengene vil bli trukket fra hovedkontoen. Fordi du allerede har fått 10 000, så nå bør du begynne å spille og spare noen av disse pengene ;)
 
-Now you can run the game.
+## Spilleregler
+- Målsum: 200
+- Styring: Piltaster
+- Samle:
+  - Mynter for 1 poeng
+  - Potter for 5 poeng
+  - Regnbuer gir 7 ekstra sekunder
+- Din endelige poengsum er beløpet du har samlet når tiden går ut.
+- Du kan deretter velge om du vil overføre dette beløpet til din sparekonto eller avbryte.
 
-Using git:
-Navigate to the folder by using: cd "file location"
-Then type: python game.py
+## Begrensninger og Preferanser
+- Det er en forhåndsdefinert daglig sparegrense (f.eks., 500 kr).
+- Brukere kan justere denne grensen etter eget ønske (mellom 0 og 5000 kr).
+  
+## Fremtidige Forbedringer
+Spillet er strukturert for å tillate enkel integrasjon med en "bank" via back-end, noe som muliggjør sanntidsoverføringer av in-game valuta (poengsum) til brukerens faktiske sparekonto. Denne interaksjonen er tilrettelagt gjennom JSON-forespørsler og sikret med Flasks robuste funksjoner.
 
-In a vscode or IntelliJ IDEA:
-Open/Import the project folder, and click "Run python file" inside Visual Studio Code or a similar program.
-
-## Running the app: 
-Once the server is running locally:
-enter: http://127.0.0.1:5000
-Then you'll have to create a user to log in.
-Each new users will get created two bank accouns in the sql: Main account and Savings account.
-10 000 NOK (kr) is automatically added for each new registered user. Cool huh?
-When you play the game, you will have the chance to transfer the amount equal to the score of the game, into your savings account. The money will be withdrawn from the main account. Because you already got 10 000, so now you should start playing and save some of those money ;)
-
-## Game Rules
-Try to reach the maximum score of 200-, before the time runs out!
-Steer with arrows.
-Coins give 1,-
-Pots give 5-,
-Rainbows give an additional 7 seconds.
-When time runs out, the score achieved will be the amount of money you save.
-
-## Comments
-
-I hope you liked the game, and also the styling on the bank account!
-Once you have played and accepted the tranfer, the transactions will appear both on the main page(last 5), as well as the history-page(all transactions)
+## Takk
+Dette prosjektet ble laget forbindelse med Stacc Challenge, med mål om å vise kreativitet og innovasjon i finansteknologiske løsninger. Kos deg med spillet og god sparing!
