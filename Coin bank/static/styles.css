@@ -1,0 +1,30 @@
+@keyframes flash {
+  0% { color: transparent; }
+  50% { color: green; }
+  100% { color: transparent; }
+}
+
+#game-container {
+  z-index: 2;
+  position: relative;
+}
+
+.footer {
+  z-index: 1;
+  position: relative;
+}
+
+
+.flash-text {
+  animation: flash 1.5s infinite;
+}
+
+ul.flash-messages {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  ul.flash-messages li {
+    color: red;
+  }
+

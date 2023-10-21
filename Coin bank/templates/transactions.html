@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Nylige Transaksjoner</h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Transaction ID</th>
+                <th scope="col">Time</th>
+                <th scope="col">Brukskonto</th>
+                <th scope="col">Sparekonto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction[0] }}</td>
+                <td>{{ transaction[1] }}</td>
+                <td>
+                    <span class="text-danger">- {{ transaction[3] }} {{ transaction[4] }}</span>
+                </td>
+                <td>
+                    <span class="text-success">+ {{ transaction[3] }} {{ transaction[4] }}</span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+<script src="/static/js/functions.js"></script>
+<link rel="stylesheet" href="/static/css/styles.css">
+{% endblock %}

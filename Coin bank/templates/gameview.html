@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Coin Quest: Rainbow Rush</h1>
+
+<!-- This is your parent container in HTML -->
+<div id="phaser-game"></div>
+
+<!-- Bootstrap Container for Centering -->
+<div class="container" style="z-index: 1;">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div id="game-container" style="margin: auto; z-index: 2;"></div>
+        </div>
+    </div>
+<p class="text-center">I dette spillet kan du score maks 200 poeng. Målet er å score så mye poeng som mulig før tiden går ut.<br>
+Det som er kult er at istedenfor å tape penger på spill eller lotteri, kan du her velge å overføre pengene til din sparekonto!<br>
+Slik sparer du penger på en gøy måte!</p>  <br>
+<p class="text-center">Gryte gir 5 mynt, Regnbue gir 7 sekunder lenger tid.</p>
+<br><p class="text-center"><strong>For å kunne kontrollere hvor mye du ønsker å spare daglig:</strong>
+    <label for="dailyLimitInput">Sett dagsgrense her: </label>
+    <input type="number" id="dailyLimitInput" max="5000">
+<button id="updateLimit">Oppdater</button>
+
+<!-- Reference to styles.css -->
+<link rel="stylesheet" href="/static/styles.css">
+<!-- Phaser.js library -->
+<script src="//cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.js"></script>
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Game logic -->
+<script src="/static/game.js" defer></script>
+
+
+{% endblock %}

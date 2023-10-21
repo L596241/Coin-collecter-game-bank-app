@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center">
+        <div class="text-center">
+            <h1>Velkommen til Stacc challenge web application</h1>
+            <p>Her får du oversikt over dine kontoer, og du kan spare penger på en gøy måte ved å spille dette avhengighetsskapende spillet</p>
+            <a href="/gameview" class="flash-text">Prøv det nå!</a>
+
+            <!-- Thumbnail for Game View -->
+        <div class="my-1">
+            <a href="/gameview">
+                <img src="/static/images/gamethumb.png" alt="Game Thumbnail" width="250">
+            </a>
+        </div>
+ 
+       <p class="text-center">Stacc is a Norwegian fintech company with more than 30 years of experience delivering digital solutions and consulting services to banks, asset finance providers, insurance companies, pension funds, family offices and the public sector in the Nordics.
+
+        Stacc combines financial technology with design and strategic know-how.
+        We're fast, we understand, we help you do the right things the right way.
+        We enable financial services to innovate, surprise and excite.</p>
+    </div>
+</div>
+
+{% endblock %}
